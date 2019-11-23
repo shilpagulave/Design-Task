@@ -1,0 +1,40 @@
+table {
+  width: 100%;
+  height: 20px;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 90%;
+}
+
+td,
+th {
+  width: 25%;
+}
+.headingmarg {
+  margin-top: 20px;
+}
+
+.addiconclass {
+  background-color: white;
+  border: none;
+}
+.addiconclass1 {
+  color: green;
+}
+.borderclass {
+  border: none;
+  border-left-style: solid;
+  border-left-width: 20px;
+  border-left-color: green;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: green;
+}
+.borderclass1 {
+  border: none;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: green;
+}

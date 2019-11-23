@@ -1,0 +1,30 @@
+<div class="container1">
+  <div class="margintop">
+    <div class="input-group mb-3 ">
+      <h5 class="form-control  borderclass">User Management</h5>
+      <div class="input-group-prepend borderclass1">
+        <span class="input-group-text addiconclass"
+          ><i class="material-icons addiconclass1">
+            add_circle
+          </i></span
+        >
+      </div>
+    </div>
+
+    <div class="input-group mb-3 ">
+      <div class="input-group-prepend">
+        <span class="input-group-text addiconclass"
+          ><i class="material-icons">
+            search
+          </i></span
+        >
+      </div>
+      <input
+        type="text"
+        class="form-control addiconclass"
+        (keyup)="applyFilter($event.target.value)"
+        placeholder="search"
+      />
+    </div>
+  </div>
+</div>

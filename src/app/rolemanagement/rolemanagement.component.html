@@ -1,0 +1,61 @@
+<div class="headingmarg">
+  <h4>Role Management</h4>
+</div>
+
+<div class="input-group mb-3 ">
+  <div class="input-group-prepend borderclass">
+    <span class="input-group-text addiconclass"
+      ><i class="material-icons">
+        search
+      </i></span
+    >
+  </div>
+  <input
+    type="text"
+    class="form-control borderclass1"
+    (keyup)="applyFilter($event.target.value)"
+    placeholder="search"
+  />
+  <div class="input-group-prepend borderclass1">
+    <span class="input-group-text addiconclass"
+      ><i class="material-icons addiconclass1">
+        add_circle
+      </i></span
+    >
+  </div>
+</div>
+
+<div class="mat-elevation-z8">
+  <table mat-table [dataSource]="dataSource" matSort>
+    <!-- ID Column -->
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>ID</th>
+      <td mat-cell *matCellDef="let row">{{ row.id }}</td>
+    </ng-container>
+
+    <!-- Progress Column -->
+    <ng-container matColumnDef="progress">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Name</th>
+      <td mat-cell *matCellDef="let row">{{ row.name }}</td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Status</th>
+      <td mat-cell *matCellDef="let row">{{ row.progress }}%</td>
+    </ng-container>
+
+    <!-- Color Column -->
+    <ng-container matColumnDef="color">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>view detail</th>
+      <td mat-cell *matCellDef="let row" [style.color]="row.viewDetail">
+        {{ row.color }}
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+
+  <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+</div>

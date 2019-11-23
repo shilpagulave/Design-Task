@@ -1,0 +1,90 @@
+<mat-toolbar color="white">
+  <mat-toolbar-row>
+    <button mat-icon-button>
+      <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+    </button>
+    <img src="../assets/logo.png" class="imgpadding" />
+
+    <div class="main">
+      <div class="form-group has-search">
+        <i class="material-icons form-control-feedback">
+          search
+        </i>
+        <input type="text" class="form-control cl1" placeholder="Search" />
+      </div>
+    </div>
+
+    <span class="menu-spacer"></span>
+    <i class="material-icons notific">
+      notifications
+    </i>
+
+    <button
+      mat-button
+      [matMenuTriggerFor]="menu"
+      aria-label="Example icon-button with a menu"
+      class="btnpadding"
+    >
+      ANUJ GUPTA
+      <i class="material-icons">
+        arrow_drop_down
+      </i>
+    </button>
+
+    <img class="jpg-icon" src="../assets/photo.jpg" />
+
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>
+        <a mat-list-item routerLink="/librarian/librarian-profile"
+          ><mat-icon>person</mat-icon>Profile</a
+        >
+      </button>
+      <button mat-menu-item disabled>
+        <a mat-list-item routerLink="/librarian/librarian-changpassword"
+          ><mat-icon>settings</mat-icon>Change Password</a
+        >
+      </button>
+      <button mat-menu-item>
+        <a mat-list-item routerLink="/librarian/librarian-logout"
+          ><mat-icon>power_settings_new</mat-icon>Sign Out</a
+        >
+      </button>
+    </mat-menu>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav #sidenav>
+    <mat-nav-list>
+      <a mat-list-item routerLink="/librarian/librarian-dashboard"
+        ><i class="material-icons"> dashboard </i>Dashboard</a
+      >
+      <a mat-list-item routerLink="/librarian/librarian-addbooks"
+        ><i class="material-icons"> add_to_photos </i>Add Books</a
+      >
+      <a mat-list-item routerLink="/librarian/librarian-userlist"
+        ><i class="material-icons"> format_list_bulleted </i>User List</a
+      >
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div style="height: 88vh;">
+      <!-- <router-outlet></router-outlet> -->
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <app-rolemanagement></app-rolemanagement>
+          </div>
+          <div class="col-md-6">
+            <div class="row">
+              <app-usermanagement></app-usermanagement>
+            </div>
+            <div class="row">
+              <app-objectmanagement></app-objectmanagement>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

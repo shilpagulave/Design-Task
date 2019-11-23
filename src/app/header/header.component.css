@@ -1,0 +1,62 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+.menu-spacer {
+  flex: 1 1 auto;
+  /* float: right; */
+}
+.imgpadding {
+  padding: 10px;
+}
+.btnpadding {
+  padding: 2px;
+  /* border-left: 1px solid black; */
+}
+.jpg-icon {
+  border-radius: 60px;
+}
+.notific {
+  margin-right: 5px;
+}
+.main {
+  width: 80%;
+  margin-top: 10px;
+}
+
+/* Bootstrap 4 text input with search icon */
+
+.has-search .form-control {
+  padding-left: 2.375rem;
+  width: 80%;
+  margin-top: 10px;
+}
+
+.has-search .form-control-feedback {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  width: 2.375rem;
+  height: 2.375rem;
+  line-height: 2.375rem;
+  text-align: center;
+  pointer-events: none;
+  color: #aaa;
+}
+.cl1 {
+  border: none;
+  /* margin-top: 10px; */
+}
