@@ -1,9 +1,9 @@
-<mat-toolbar color="white">
+<mat-toolbar color="white" fxLayout="row" fxLayoutAlign="start center">
   <mat-toolbar-row>
     <button mat-icon-button>
       <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
     </button>
-    <img src="../assets/logo.png" class="imgpadding" />
+    <img src="../assets/logo.png" class="imgpadding img-fluid" />
 
     <div class="main">
       <div class="form-group has-search">
@@ -31,7 +31,7 @@
       </i>
     </button>
 
-    <img class="jpg-icon" src="../assets/photo.jpg" />
+    <img class="jpg-icon img-fluid" src="../assets/photo.jpg" />
 
     <mat-menu #menu="matMenu">
       <button mat-menu-item>
@@ -65,6 +65,14 @@
       <a mat-list-item routerLink="/librarian/librarian-userlist"
         ><i class="material-icons"> format_list_bulleted </i>User List</a
       >
+      <div class="main1">
+        <div class="form-group has-search">
+          <i class="material-icons form-control-feedback">
+            search
+          </i>
+          <input type="text" class="form-control cl1" placeholder="Search" />
+        </div>
+      </div>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>

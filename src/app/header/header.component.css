@@ -16,7 +16,7 @@
   z-index: 1;
 }
 .menu-spacer {
-  flex: 1 1 auto;
+  flex: auto;
   /* float: right; */
 }
 .imgpadding {
@@ -34,6 +34,7 @@
 }
 .main {
   width: 80%;
+  /* display: 1 1 flex; */
   margin-top: 10px;
 }
 
@@ -59,4 +60,17 @@
 .cl1 {
   border: none;
   /* margin-top: 10px; */
+}
+
+@media screen and (min-width: 401px) and (max-width: 1024px) {
+  .main {
+    display: none;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 400px) {
+  .main1 {
+    display: inline-flex;
+    width: auto;
+    margin-top: 10px;
+  }
 }

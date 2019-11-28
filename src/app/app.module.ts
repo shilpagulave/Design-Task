@@ -18,9 +18,11 @@ import { MatSortModule } from "@angular/material/sort";
 // import { TaskpageComponent } from './taskpage/taskpage.component';
 import { MatMenuModule } from "@angular/material/menu";
 import { MatFormFieldModule } from "@angular/material";
-import {MatInputModule} from '@angular/material';
-import { UsermanagementComponent } from './usermanagement/usermanagement.component';
-import { ObjectmanagementComponent } from './objectmanagement/objectmanagement.component';
+import { MatInputModule } from "@angular/material";
+import { UsermanagementComponent } from "./usermanagement/usermanagement.component";
+import { ObjectmanagementComponent } from "./objectmanagement/objectmanagement.component";
+import { FlexLayoutModule } from "@angular/flex-layout";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,8 +47,10 @@ import { ObjectmanagementComponent } from './objectmanagement/objectmanagement.c
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
-    MatInputModule
-
+    MatInputModule,
+    FlexLayoutModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

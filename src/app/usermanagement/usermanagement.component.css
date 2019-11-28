@@ -40,8 +40,15 @@ th {
 .container1 {
   border: 1px solid white;
   background-color: white;
-  width: 450px;
+  width: auto;
   padding: 10px;
   margin-top: 50px;
   margin-bottom: 20px;
+}
+@media screen and (min-width: 401px) and (max-width: 1024px) {
+  .container1 {
+    /* box-align: center; */
+    margin-left: 80px;
+    /* width: 90%; */
+  }
 }
